@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace News.model
 {
@@ -53,8 +54,8 @@ namespace News.model
             }
 
         }
-        private String _picture;
-        public String Picture
+        private ImageSource _picture;
+        public ImageSource Picture
         {
             get
             {
