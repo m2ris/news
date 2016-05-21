@@ -36,10 +36,10 @@ namespace News
         public void lbStories_selChanged(object sender, RoutedEventArgs e)
         {
             selectedStory = lbStories.SelectedItem as Story;
-            Console.WriteLine("selection changed: " + selectedStory.Content);
             tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
-            tbDate.Text = selectedStory.Date;
+            tbDate.Text = selectedStory.Date.ToShortDateString();
+            iPicture.Source = new ImageSourceConverter().ConvertFromString(selectedStory.Picture) as ImageSource;
         }
     }
 }

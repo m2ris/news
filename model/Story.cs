@@ -38,9 +38,9 @@ namespace News.model
             }
 
         }
-        private String _date;
+        private DateTime _date;
 
-        public String Date
+        public DateTime Date
         {
             get
             {
@@ -50,6 +50,22 @@ namespace News.model
             set
             {
                 _date = value;
+            }
+
+        }
+
+        private String _picture;
+
+        public String Picture
+        {
+            get
+            {
+                return _picture;
+            }
+
+            set
+            {
+                _picture = value;
             }
 
         }
