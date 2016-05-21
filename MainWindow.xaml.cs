@@ -30,7 +30,8 @@ namespace News
         {
             InitializeComponent();
 
-            lbStories.ItemsSource = storiesService.loadStories();
+            //lbStories.ItemsSource = storiesService.loadStories();
+            lbStories.ItemsSource = storiesService.LoadFromPostimees();
         }
 
         public void lbStories_selChanged(object sender, RoutedEventArgs e)
@@ -39,7 +40,7 @@ namespace News
             tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
             tbDate.Text = selectedStory.Date.ToShortDateString();
-            iPicture.Source = new ImageSourceConverter().ConvertFromString(selectedStory.Picture) as ImageSource;
+            iPicture.Source = selectedStory.Picture;
         }
     }
 }
