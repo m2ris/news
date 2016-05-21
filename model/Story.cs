@@ -53,5 +53,33 @@ namespace News.model
             }
 
         }
+        private String _picture;
+        public String Picture
+        {
+            get
+            {
+                return _picture;
+            }
+
+            set
+            {
+                _picture = value;
+            }
+
+        }
+        private String _author;
+        public String Author
+        {
+            get
+            {
+                return _author;
+            }
+
+            set
+            {
+                _author = value;
+            }
+
+        }
     }
 }

@@ -37,9 +37,22 @@ namespace News
         {
             selectedStory = lbStories.SelectedItem as Story;
             Console.WriteLine("selection changed: " + selectedStory.Content);
+
+            tbAuthor.Text = selectedStory.Author;
             tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
             tbDate.Text = selectedStory.Date;
+            
+
+            try
+            {
+                ImageSourceConverter converter = new ImageSourceConverter();
+                ImageSource src = converter.ConvertFromString(selectedStory.Picture) as ImageSource;
+                iPicture.Source = src;
+            }catch(NullReferenceException ex)
+            {
+
+            }
         }
     }
 }

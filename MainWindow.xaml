@@ -18,10 +18,19 @@
                 <RowDefinition Height="9*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock Name="tbContent" Grid.Row="1"></TextBlock>
-            <TextBlock Name="tbTitle" Grid.Row="0" ></TextBlock>
-            <TextBlock Name="tbDate" Grid.Row="2" Text="asdfgh" ></TextBlock>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="tbTitle" Grid.Row="0" Grid.Column="0"></TextBlock>
+                <TextBlock Name="tbAuthor" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></TextBlock>    
+            </StackPanel>
+            
+            <TextBlock Name="tbContent" Grid.Row="1" Grid.Column="0"></TextBlock>
+            <TextBlock Name="tbDate" Grid.Row="2" Grid.Column="0"></TextBlock>
+            
+            <Image Name="iPicture" Grid.Row="1" Grid.Column="1"></Image>
         </Grid>
-
     </Grid>
 </Window>
