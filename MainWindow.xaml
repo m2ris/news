@@ -23,10 +23,10 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <TextBlock Name="tbTitle" Grid.Row="0" Grid.Column="0"></TextBlock>
-            <TextBlock Name="tbContent" Grid.Row="1" Grid.Column="0"></TextBlock>
+            <TextBlock TextWrapping="Wrap" Name="tbContent" Grid.Row="1" Grid.Column="0"></TextBlock>
             <TextBlock Name="tbDate" Grid.Row="2" Grid.Column="0"></TextBlock>
 
-            <Image Name="iPicture" Grid.RowSpan="3" Grid.Column="1"/>
+            <Image Name="iPicture" Grid.Row="1" Grid.Column="1"/>
         </Grid>
 
     </Grid>

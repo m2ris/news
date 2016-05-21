@@ -47,11 +47,13 @@ namespace News.data
 
             foreach (XmlNode node in rssNodes)
             {
+                String picUrl = node["media:content"].Attributes["url"].Value;
                 stories.Add(new Story()
                 {
-                    Title = node.SelectSingleNode("title").InnerText,
-                    Content = node.SelectSingleNode("description").InnerText
-                });
+                    Title = node["title"].InnerText,
+                    Content = node["description"].InnerText,
+                    Picture = toImgSource(picUrl)
+            });
             }
 
             return stories;
