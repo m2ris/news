@@ -23,7 +23,7 @@ namespace News
     /// </summary>
     public partial class MainWindow : Window
     {
-        StoriesService storiesService = new StoriesService();
+        StoriesService storiesService = new ErrStoriesService();
         Story selectedStory;
 
         public MainWindow()
@@ -42,17 +42,7 @@ namespace News
             tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
             tbDate.Text = selectedStory.Date;
-            
-
-            try
-            {
-                ImageSourceConverter converter = new ImageSourceConverter();
-                ImageSource src = converter.ConvertFromString(selectedStory.Picture) as ImageSource;
-                iPicture.Source = src;
-            }catch(NullReferenceException ex)
-            {
-
-            }
+            iPicture.Source = selectedStory.Picture;
         }
     }
 }

@@ -63,7 +63,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="data\ErrStoriesService.cs" />
+    <Compile Include="data\MockedStoriesService.cs" />
+    <Compile Include="data\PostimeesStoriesService.cs" />
     <Compile Include="data\StoriesService.cs" />
+    <Compile Include="Helpers\ImageUrlConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -11,7 +11,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Name="lbStories" DisplayMemberPath="Title" Grid.Column="0" SelectionChanged="lbStories_selChanged"></ListBox>
+        <ListBox Name="lbStories" DisplayMemberPath="Title" Grid.Column="0" SelectionChanged="lbStories_selChanged" ></ListBox>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -26,8 +26,8 @@
                 <TextBlock Name="tbTitle" Grid.Row="0" Grid.Column="0"></TextBlock>
                 <TextBlock Name="tbAuthor" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></TextBlock>    
             </StackPanel>
-            
-            <TextBlock Name="tbContent" Grid.Row="1" Grid.Column="0"></TextBlock>
+
+            <TextBlock Name="tbContent" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap"></TextBlock>
             <TextBlock Name="tbDate" Grid.Row="2" Grid.Column="0"></TextBlock>
             
             <Image Name="iPicture" Grid.Row="1" Grid.Column="1"></Image>
