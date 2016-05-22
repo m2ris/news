@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace News.model
 {
-    class Story
+    public class Story
     {
         private String _title;
 

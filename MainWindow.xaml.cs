@@ -24,7 +24,7 @@ namespace News
     public partial class MainWindow : Window
     {
         StoriesService storiesService = new StoriesService();
-        Story selectedStory;
+        Story SelectedStory;
 
         public MainWindow()
         {
@@ -36,11 +36,12 @@ namespace News
 
         public void lbStories_selChanged(object sender, RoutedEventArgs e)
         {
-            selectedStory = lbStories.SelectedItem as Story;
-            tbContent.Text = selectedStory.Content;
+            SelectedStory = lbStories.SelectedItem as Story;
+            StoryControl.Story = SelectedStory;
+            /*tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
             tbDate.Text = selectedStory.Date.ToShortDateString();
-            iPicture.Source = selectedStory.Picture;
+            iPicture.Source = selectedStory.Picture;*/
         }
     }
 }
