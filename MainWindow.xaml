@@ -13,8 +13,6 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <ListBox Name="lbStories" DisplayMemberPath="Title" Grid.Column="0" SelectionChanged="lbStories_selChanged" ></ListBox>
-        <controls:StoryControl x:Name="scStory" Grid.Column="1">
-         
-        </controls:StoryControl>
+        <controls:StoryControl x:Name="scStory" Grid.Column="1"></controls:StoryControl>
     </Grid>
 </Window>

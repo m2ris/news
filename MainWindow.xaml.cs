@@ -42,7 +42,7 @@ namespace News
             scStory.Description = SelectedStory.Description;
             scStory.Date = SelectedStory.Date;
             scStory.Author = SelectedStory.Author;
-            //scStory.Picture = SelectedStory.Picture; 
+            scStory.Picture = SelectedStory.Picture; 
 
             /*tbAuthor.Text = SelectedStory.Author;
             tbContent.Text = SelectedStory.Content;

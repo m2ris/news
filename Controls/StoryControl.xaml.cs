@@ -29,7 +29,7 @@ namespace News.Controls
         }
         public static readonly DependencyProperty TitleProperty =
             DependencyProperty.Register("Title", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(""));
+              typeof(StoryControl), new PropertyMetadata(null));
 
         #endregion
         #region Description DP
@@ -40,7 +40,7 @@ namespace News.Controls
         }
         public static readonly DependencyProperty DescriptionProperty =
             DependencyProperty.Register("Description", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(""));
+              typeof(StoryControl), new PropertyMetadata(null));
 
         #endregion
         #region Date DP
@@ -51,7 +51,7 @@ namespace News.Controls
         }
         public static readonly DependencyProperty DateProperty =
             DependencyProperty.Register("Date", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(""));
+              typeof(StoryControl), new PropertyMetadata(null));
 
         #endregion
         #region Author DP
@@ -62,18 +62,18 @@ namespace News.Controls
         }
         public static readonly DependencyProperty AuthorProperty =
             DependencyProperty.Register("Author", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(""));
+              typeof(StoryControl), new PropertyMetadata(null));
 
         #endregion
         #region Picture DP
-        public String Picture
+        public ImageSource Picture
         {
-            get { return (String)GetValue(PictureProperty); }
+            get { return (ImageSource)GetValue(PictureProperty); }
             set { SetValue(PictureProperty, value); }
         }
         public static readonly DependencyProperty PictureProperty =
-            DependencyProperty.Register("Picture", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(""));
+            DependencyProperty.Register("Picture", typeof(ImageSource),
+              typeof(StoryControl), new PropertyMetadata(default(ImageSource)));
 
         #endregion
         public StoryControl()
