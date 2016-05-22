@@ -1,4 +1,5 @@
-﻿using System;
+﻿using News.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,59 +22,15 @@ namespace News.Controls
     /// </summary>
     public partial class StoryControl : UserControl
     {
-        #region Title DP
-        public String Title
+        #region Story DP
+        public Story Story
         {
-            get { return (String)GetValue(TitleProperty); }
-            set { SetValue(TitleProperty, value); }
+            get { return (Story)GetValue(StoryProperty); }
+            set { SetValue(StoryProperty, value); }
         }
-        public static readonly DependencyProperty TitleProperty =
-            DependencyProperty.Register("Title", typeof(string),
+        public static readonly DependencyProperty StoryProperty =
+            DependencyProperty.Register("Story", typeof(Story),
               typeof(StoryControl), new PropertyMetadata(null));
-
-        #endregion
-        #region Description DP
-        public String Description
-        {
-            get { return (String)GetValue(DescriptionProperty); }
-            set { SetValue(DescriptionProperty, value); }
-        }
-        public static readonly DependencyProperty DescriptionProperty =
-            DependencyProperty.Register("Description", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(null));
-
-        #endregion
-        #region Date DP
-        public String Date
-        {
-            get { return (String)GetValue(DateProperty); }
-            set { SetValue(DateProperty, value); }
-        }
-        public static readonly DependencyProperty DateProperty =
-            DependencyProperty.Register("Date", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(null));
-
-        #endregion
-        #region Author DP
-        public String Author
-        {
-            get { return (String)GetValue(AuthorProperty); }
-            set { SetValue(AuthorProperty, value); }
-        }
-        public static readonly DependencyProperty AuthorProperty =
-            DependencyProperty.Register("Author", typeof(string),
-              typeof(StoryControl), new PropertyMetadata(null));
-
-        #endregion
-        #region Picture DP
-        public ImageSource Picture
-        {
-            get { return (ImageSource)GetValue(PictureProperty); }
-            set { SetValue(PictureProperty, value); }
-        }
-        public static readonly DependencyProperty PictureProperty =
-            DependencyProperty.Register("Picture", typeof(ImageSource),
-              typeof(StoryControl), new PropertyMetadata(default(ImageSource)));
 
         #endregion
         public StoryControl()

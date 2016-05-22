@@ -17,13 +17,13 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="{Binding Path=Title}" Grid.Row="0" Grid.Column="0"></TextBlock>
-            <TextBlock Text="{Binding Path=Author}" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></TextBlock>
+            <TextBlock Text="{Binding Path=Story.Title}" Grid.Row="0" Grid.Column="0"></TextBlock>
+            <TextBlock Text="{Binding Path=Story.Author}" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></TextBlock>
         </StackPanel>
 
-        <TextBlock Text="{Binding Path=Description}" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap"></TextBlock>
-        <TextBlock Text="{Binding Path=Date}" Grid.Row="2" Grid.Column="0"></TextBlock>
+        <TextBlock Text="{Binding Path=Story.Description}" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap"></TextBlock>
+        <TextBlock Text="{Binding Path=Story.Date}" Grid.Row="2" Grid.Column="0"></TextBlock>
 
-        <Image Source="{Binding Path=Picture}" Grid.Row="1" Grid.Column="1"></Image>
+        <Image Source="{Binding Path=Story.Picture}" Grid.Row="1" Grid.Column="1"></Image>
     </Grid>
 </UserControl>
