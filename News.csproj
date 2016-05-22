@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="data\ErrStoriesService.cs" />
     <Compile Include="data\MockedStoriesService.cs" />
+    <Compile Include="data\DelfiStoriesService.cs" />
     <Compile Include="data\PostimeesStoriesService.cs" />
     <Compile Include="data\StoriesService.cs" />
     <Compile Include="Helpers\ImageUrlConverter.cs" />

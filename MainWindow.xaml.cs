@@ -23,7 +23,7 @@ namespace News
     /// </summary>
     public partial class MainWindow : Window
     {
-        StoriesService storiesService = new ErrStoriesService();
+        StoriesService storiesService = new DelfiStoriesService();
         Story selectedStory;
 
         public MainWindow()
