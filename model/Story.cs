@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using System.Windows.Media;
 
 namespace News.model
 {
-    public class Story
+    public class Story : INotifyPropertyChanged
     {
         private String _title;
 
@@ -21,6 +22,7 @@ namespace News.model
             set
             {
                 _title = value;
+                OnPropertyChanged("Title");
             }
 
         }
@@ -36,6 +38,7 @@ namespace News.model
             set
             {
                 _content = value;
+                OnPropertyChanged("Content");
             }
 
         }
@@ -51,6 +54,7 @@ namespace News.model
             set
             {
                 _date = value;
+                OnPropertyChanged("Date");
             }
 
         }
@@ -67,8 +71,17 @@ namespace News.model
             set
             {
                 _picture = value;
+                OnPropertyChanged("Picture");
             }
 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
     }
 }

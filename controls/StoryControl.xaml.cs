@@ -29,9 +29,6 @@ namespace News.controls
             set { SetValue(StoryProperty, value); }
         }
 
-        /// <summary>
-        /// Identified the Label dependency property
-        /// </summary>
         public static readonly DependencyProperty StoryProperty =
             DependencyProperty.Register("Story", typeof(Story),
               typeof(StoryControl), new PropertyMetadata(null));

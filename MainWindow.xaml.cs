@@ -25,23 +25,24 @@ namespace News
     {
         StoriesService storiesService = new StoriesService();
         Story SelectedStory;
+        ObservableCollection<Story> Stories = new ObservableCollection<Story>();
 
         public MainWindow()
         {
             InitializeComponent();
-
+            WindowRoot.DataContext = this;
             //lbStories.ItemsSource = storiesService.loadStories();
-            lbStories.ItemsSource = storiesService.LoadFromPostimees();
+            Stories = storiesService.LoadFromPostimees();
         }
 
-        public void lbStories_selChanged(object sender, RoutedEventArgs e)
+        /*public void lbStories_selChanged(object sender, RoutedEventArgs e)
         {
             SelectedStory = lbStories.SelectedItem as Story;
             StoryControl.Story = SelectedStory;
             /*tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
             tbDate.Text = selectedStory.Date.ToShortDateString();
-            iPicture.Source = selectedStory.Picture;*/
-        }
+            iPicture.Source = selectedStory.Picture;
+        }*/
     }
 }
