@@ -30,7 +30,7 @@ namespace News
         {
             InitializeComponent();
 
-            lbStories.ItemsSource = storiesService.loadStories();
+            ReloadStories();
         }
 
         public void lbStories_selChanged(object sender, RoutedEventArgs e)
@@ -45,6 +45,27 @@ namespace News
             tbTitle.Text = SelectedStory.Title;
             tbDate.Text = SelectedStory.Date;
             iPicture.Source = SelectedStory.Picture;*/
+        }
+
+        private void Delfi_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            storiesService = new DelfiStoriesService();
+            ReloadStories();
+        }
+
+        private void Err_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            storiesService = new ErrStoriesService();
+            ReloadStories();
+        }
+        private void Postimees_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            storiesService = new PostimeesStoriesService();
+            ReloadStories();        
+        }
+        private void ReloadStories()
+        {
+            lbStories.ItemsSource = storiesService.loadStories();
         }
     }
 }
