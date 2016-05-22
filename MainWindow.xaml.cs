@@ -23,8 +23,8 @@ namespace News
     /// </summary>
     public partial class MainWindow : Window
     {
-        StoriesService storiesService = new DelfiStoriesService();
-        Story selectedStory;
+        StoriesService storiesService = new PostimeesStoriesService();
+        Story SelectedStory;
 
         public MainWindow()
         {
@@ -35,14 +35,20 @@ namespace News
 
         public void lbStories_selChanged(object sender, RoutedEventArgs e)
         {
-            selectedStory = lbStories.SelectedItem as Story;
-            Console.WriteLine("selection changed: " + selectedStory.Content);
+            SelectedStory = lbStories.SelectedItem as Story;
+            Console.WriteLine("selection changed: " + SelectedStory.Title);
 
-            tbAuthor.Text = selectedStory.Author;
-            tbContent.Text = selectedStory.Content;
-            tbTitle.Text = selectedStory.Title;
-            tbDate.Text = selectedStory.Date;
-            iPicture.Source = selectedStory.Picture;
+            scStory.Title = SelectedStory.Title;
+            scStory.Description = SelectedStory.Description;
+            scStory.Date = SelectedStory.Date;
+            scStory.Author = SelectedStory.Author;
+            //scStory.Picture = SelectedStory.Picture; 
+
+            /*tbAuthor.Text = SelectedStory.Author;
+            tbContent.Text = SelectedStory.Content;
+            tbTitle.Text = SelectedStory.Title;
+            tbDate.Text = SelectedStory.Date;
+            iPicture.Source = SelectedStory.Picture;*/
         }
     }
 }

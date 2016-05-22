@@ -26,7 +26,7 @@ namespace News.data
                 stories.Add(new Story()
                 {
                     Title = item["title"].InnerText,
-                    Content = item["description"].InnerText,
+                    Description = item["description"].InnerText,
                     Date = item["pubDate"].InnerText,
                 });
             }

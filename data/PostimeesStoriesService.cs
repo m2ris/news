@@ -24,14 +24,14 @@ namespace News.data
 
             foreach(XmlNode item in news)
             {
-                string imageUrl = item["media:content"].Attributes["url"].Value;
+                string imageUrl = item["media:content"]?.Attributes["url"]?.Value;
 
                 stories.Add(new Story()
                 {
-                    Title = item["title"].InnerText,
-                    Author = item["dc:creator"].InnerText,
-                    Content = item["description"].InnerText,
-                    Date = item["pubDate"].InnerText,
+                    Title = item["title"]?.InnerText,
+                    Author = item["dc:creator"]?.InnerText,
+                    Description = item["description"]?.InnerText,
+                    Date = item["pubDate"]?.InnerText,
                     Picture = ImageUrlConverter.ToImageSource(imageUrl)
                 });
             }

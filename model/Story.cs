@@ -26,7 +26,7 @@ namespace News.model
         }
         private String _content;
 
-        public String Content
+        public String Description
         {
             get
             {
