@@ -11,8 +11,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <ListBox Name="lbStories" DisplayMemberPath="Title" Grid.Column="0" SelectionChanged="lbStories_selChanged"></ListBox>
         <controls:StoryControl Grid.Column="1" x:Name="StoryControl"></controls:StoryControl>
+        <controls:StoryControl Grid.Column="2" x:Name="StoryControl2"></controls:StoryControl>
     </Grid>
 </Window>

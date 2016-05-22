@@ -16,10 +16,10 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="tbTitle" Text="{Binding Path=Story.Title}" Grid.Row="0" Grid.Column="0"></TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="{Binding Path=Story.Content}" Name="tbContent" Grid.Row="1" Grid.Column="0"></TextBlock>
-        <TextBlock Name="tbDate" Text="{Binding Path=Story.Date}" Grid.Row="2" Grid.Column="0"></TextBlock>
+        <TextBlock Text="{Binding Path=Story.Title}" Grid.Row="0" Grid.Column="0"></TextBlock>
+        <TextBlock Text="{Binding Path=Story.Content}" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" ></TextBlock>
+        <TextBlock Text="{Binding Path=Story.Date}" Grid.Row="2" Grid.Column="0"></TextBlock>
 
-        <Image Name="iPicture" Source="{Binding Path=Story.Picture}" Grid.Row="1" Grid.Column="1"/>
+        <Image Source="{Binding Path=Story.Picture}" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </UserControl>
