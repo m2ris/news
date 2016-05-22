@@ -38,7 +38,6 @@ namespace News
         {
             SelectedStory = lbStories.SelectedItem as Story;
             StoryControl.Story = SelectedStory;
-            StoryControl2.Story = storiesService.LoadFromPostimees()[0];
             /*tbContent.Text = selectedStory.Content;
             tbTitle.Text = selectedStory.Title;
             tbDate.Text = selectedStory.Date.ToShortDateString();

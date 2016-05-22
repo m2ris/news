@@ -33,7 +33,14 @@ namespace News.data
 
         private ImageSource toImgSource(string val)
         {
-            return new ImageSourceConverter().ConvertFromString(val) as ImageSource;
+            try
+            {
+                return new ImageSourceConverter().ConvertFromString(val) as ImageSource;
+            }
+            catch(NullReferenceException ex)
+            {
+                return null;
+            }
         }
 
         public ObservableCollection<Story> LoadFromPostimees()
@@ -47,11 +54,11 @@ namespace News.data
 
             foreach (XmlNode node in rssNodes)
             {
-                String picUrl = node["media:content"].Attributes["url"].Value;
+                String picUrl = node["media:content"]?.Attributes["url"]?.Value;
                 stories.Add(new Story()
                 {
-                    Title = node["title"].InnerText,
-                    Content = node["description"].InnerText,
+                    Title = node["title"]?.InnerText,
+                    Content = node["description"]?.InnerText,
                     Picture = toImgSource(picUrl)
             });
             }
