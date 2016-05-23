@@ -19,9 +19,9 @@
                 <Image Source="http://h.delfi.ee/g/l/223_delfi_2015a.png" MouseUp="Delfi_MouseUp" Width="80"></Image>
                 
             </StackPanel>
-            <ListBox Name="lbStories" DisplayMemberPath="Title" SelectionChanged="lbStories_selChanged" ></ListBox>
+            <ListBox SelectedItem="{Binding SelectedStory, Mode=TwoWay}"  Name="lbStories" DisplayMemberPath="Title" SelectionChanged="lbStories_selChanged" ></ListBox>
         </StackPanel>
-        <controls:StoryControl x:Name="scStory" Grid.Column="1"></controls:StoryControl>
-
+        <controls:StoryControl x:Name="scStory" Story="{Binding SelectedStory}" Grid.Column="1"></controls:StoryControl>
+       
     </Grid>
 </Window>

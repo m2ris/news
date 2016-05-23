@@ -82,6 +82,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\BaseVM.cs" />
+    <Compile Include="model\MainWindowVM.cs" />
     <Compile Include="model\Story.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
