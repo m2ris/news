@@ -13,9 +13,9 @@ namespace News.data
 {
     class PostimeesStoriesService : StoriesService
     {
-        public ObservableCollection<Story> loadStories()
+        public List<Story> loadStories()
         {
-            ObservableCollection<Story> stories = new ObservableCollection<Story>();
+            List<Story> stories = new List<Story>();
 
             XmlDocument doc = new XmlDocument();
             doc.Load("http://www.postimees.ee/rss/");

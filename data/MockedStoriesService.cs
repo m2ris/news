@@ -11,9 +11,9 @@ namespace News.data
 {
     class MockedStoriesService : StoriesService
     {
-        public ObservableCollection<Story> loadStories()
+        public List<Story> loadStories()
         {
-            ObservableCollection<Story> stories = new ObservableCollection<Story>();
+            List<Story> stories = new List<Story>();
             stories.Add(new Story() {
                 Title = "esimene",
                 Author = "nipitiri",

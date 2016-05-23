@@ -70,11 +70,11 @@
     <Compile Include="Controls\StoryControl.xaml.cs">
       <DependentUpon>StoryControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="data\ErrStoriesService.cs" />
-    <Compile Include="data\MockedStoriesService.cs" />
-    <Compile Include="data\DelfiStoriesService.cs" />
-    <Compile Include="data\PostimeesStoriesService.cs" />
-    <Compile Include="data\StoriesService.cs" />
+    <Compile Include="Data\ErrStoriesService.cs" />
+    <Compile Include="Data\MockedStoriesService.cs" />
+    <Compile Include="Data\DelfiStoriesService.cs" />
+    <Compile Include="Data\PostimeesStoriesService.cs" />
+    <Compile Include="Data\StoriesService.cs" />
     <Compile Include="Helpers\ImageUrlConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -82,7 +82,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="model\Story.cs" />
+    <Compile Include="Model\ViewModel\BaseVM.cs" />
+    <Compile Include="Model\ViewModel\MainWindowVM.cs" />
+    <Compile Include="Model\Story.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -17,11 +17,10 @@
                 <Image Source="https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Eesti_Rahvusringh%C3%A4%C3%A4ling_logo.svg/220px-Eesti_Rahvusringh%C3%A4%C3%A4ling_logo.svg.png" MouseUp="Err_MouseUp" Width="80" ></Image>
                 <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Postimees_logo.svg/2000px-Postimees_logo.svg.png" MouseUp="Postimees_MouseUp" Width="100"></Image>
                 <Image Source="http://h.delfi.ee/g/l/223_delfi_2015a.png" MouseUp="Delfi_MouseUp" Width="80"></Image>
-                
             </StackPanel>
-            <ListBox Name="lbStories" DisplayMemberPath="Title" SelectionChanged="lbStories_selChanged" ></ListBox>
+            <ListBox SelectedItem="{Binding SelectedStory, Mode=TwoWay}" ItemsSource="{Binding Stories}" SelectionChanged="lbStories_selChanged" DisplayMemberPath="Title"></ListBox>
         </StackPanel>
-        <controls:StoryControl x:Name="scStory" Grid.Column="1"></controls:StoryControl>
+        <controls:StoryControl Story="{Binding SelectedStory}" Grid.Column="1"></controls:StoryControl>
 
     </Grid>
 </Window>
