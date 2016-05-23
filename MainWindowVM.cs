@@ -12,7 +12,7 @@ namespace News.model
     class MainWindowVM : BaseVM, INotifyPropertyChanged
     {
         #region SelectedStory
-        private Story _selectedStory = new Story() { Title = "test" };
+        private Story _selectedStory;
 
         public Story SelectedStory
         {
@@ -46,7 +46,7 @@ namespace News.model
         #endregion
 
         #region StoriesService
-        private StoriesService _storiesService = new PostimeesStoriesService();
+        private StoriesService _storiesService;
 
         public StoriesService StoriesService
         {
@@ -62,5 +62,10 @@ namespace News.model
             }
         }
         #endregion
+
+        public MainWindowVM()
+        {
+            StoriesService = new PostimeesStoriesService();
+        }
     }
 }
