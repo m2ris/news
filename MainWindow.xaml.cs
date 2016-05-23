@@ -23,40 +23,14 @@ namespace News
     /// </summary>
     public partial class MainWindow : Window
     {
-        StoriesService storiesService = new PostimeesStoriesService();
+        //StoriesService storiesService;
+        //Story SelectedStory;
 
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new MainWindowVM();
-            ReloadStories();
-        }
-
-        public void lbStories_selChanged(object sender, RoutedEventArgs e)
-        {
-            //SelectedStory = lbStories.SelectedItem as Story;
-            //scStory.Story = SelectedStory;
-        }
-
-        private void Delfi_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            storiesService = new DelfiStoriesService();
-            ReloadStories();
-        }
-
-        private void Err_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            storiesService = new ErrStoriesService();
-            ReloadStories();
-        }
-        private void Postimees_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            storiesService = new PostimeesStoriesService();
-            ReloadStories();        
-        }
-        private void ReloadStories()
-        {
-            lbStories.ItemsSource = storiesService.loadStories();
+            (DataContext as MainWindowVM).StoriesService = new PostimeesStoriesService();
         }
     }
 }

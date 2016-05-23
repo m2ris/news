@@ -1,5 +1,7 @@
-﻿using System;
+﻿using News.data;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -9,8 +11,10 @@ namespace News.model
 {
     public class MainWindowVM : BaseVM, INotifyPropertyChanged
     {
+        #region SelectedStory
         private Story _selectedStory;
-        public Story SelectedStory {
+        public Story SelectedStory
+        {
             get
             {
                 return _selectedStory;
@@ -21,5 +25,40 @@ namespace News.model
                 OnPropertyChanged("SelectedStory");
             }
         }
+        #endregion
+
+        #region StoriesService
+        private StoriesService _storiesService;
+        public StoriesService StoriesService
+        {
+            get
+            {
+                return _storiesService;
+            }
+            set
+            {
+                _storiesService = value;
+                Stories = new ObservableCollection<Story>(StoriesService.loadStories());
+                OnPropertyChanged("StoriesService");
+            }
+        }
+        #endregion
+
+        #region Stories
+        private ObservableCollection<Story> _stories = new ObservableCollection<Story>();
+
+        public ObservableCollection<Story> Stories
+        {
+            get
+            {
+                return _stories;
+            }
+            set
+            {
+                _stories = value;
+                OnPropertyChanged("Stories");
+            }
+        }
+        #endregion
     }
 }

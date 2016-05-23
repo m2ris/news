@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="News.Controls.DataServiceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:News.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <StackPanel Name="LayoutRoot"  Orientation="Horizontal" Height="60">
+        <Image Source="https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Eesti_Rahvusringh%C3%A4%C3%A4ling_logo.svg/220px-Eesti_Rahvusringh%C3%A4%C3%A4ling_logo.svg.png" MouseUp="Err_MouseUp" Width="80" ></Image>
+        <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Postimees_logo.svg/2000px-Postimees_logo.svg.png" MouseUp="Postimees_MouseUp" Width="100"></Image>
+        <Image Source="http://h.delfi.ee/g/l/223_delfi_2015a.png" MouseUp="Delfi_MouseUp" Width="80"></Image>
+    </StackPanel>
+
+</UserControl>
