@@ -13,6 +13,6 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <ListBox Grid.Column="0" ItemsSource="{Binding Stories}" DisplayMemberPath="Title" SelectedItem="{Binding SelectedStory, Mode=TwoWay}"></ListBox>
-        <controls:StoryControl Story="{Binding SelectedStory}"  Grid.Column="1"></controls:StoryControl>
+        <controls:StoryControl Story="{Binding SelectedStory}" Grid.Column="1"></controls:StoryControl>
     </Grid>
 </Window>

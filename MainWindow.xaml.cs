@@ -24,9 +24,8 @@ namespace News
     public partial class MainWindow : Window
     {
         private StoriesService storiesService = new StoriesService();
-        public Story SelectedStory { get; set; }
+        public Story SelectedStory { get;  set;}
         public ObservableCollection<Story> Stories { get; set; }
-        public string Tekst = "midagi";
 
         public MainWindow()
         {
@@ -34,6 +33,11 @@ namespace News
             DataContext = this;
 
             Stories = storiesService.LoadFromPostimees();
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Console.WriteLine(SelectedStory);
         }
     }
 }

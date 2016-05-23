@@ -29,7 +29,7 @@ namespace News.controls
         }
         public static readonly DependencyProperty SelectedProperty =
             DependencyProperty.Register("Selected", typeof(object),
-              typeof(StoryControl), new PropertyMetadata(null));
+              typeof(PickerControl), new PropertyMetadata(null));
         #endregion
 
         public PickerControl()
