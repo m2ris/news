@@ -11,10 +11,6 @@ namespace News.Helpers
     {
         public static ImageSource ToImageSource(string url)
         {
-            if(url == null)
-            {
-                return null;
-            }
             try
             {
                 ImageSourceConverter converter = new ImageSourceConverter();
