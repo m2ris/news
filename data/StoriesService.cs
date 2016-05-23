@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace News.data
 {
-    class StoriesService
+    public class StoriesService
     {
         public ObservableCollection<Story> loadStories()
         {

@@ -23,26 +23,17 @@ namespace News
     /// </summary>
     public partial class MainWindow : Window
     {
-        StoriesService storiesService = new StoriesService();
-        Story SelectedStory;
-        ObservableCollection<Story> Stories = new ObservableCollection<Story>();
+        private StoriesService storiesService = new StoriesService();
+        public Story SelectedStory { get; set; }
+        public ObservableCollection<Story> Stories { get; set; }
+        public string Tekst = "midagi";
 
         public MainWindow()
         {
             InitializeComponent();
-            WindowRoot.DataContext = this;
-            //lbStories.ItemsSource = storiesService.loadStories();
+            DataContext = this;
+
             Stories = storiesService.LoadFromPostimees();
         }
-
-        /*public void lbStories_selChanged(object sender, RoutedEventArgs e)
-        {
-            SelectedStory = lbStories.SelectedItem as Story;
-            StoryControl.Story = SelectedStory;
-            /*tbContent.Text = selectedStory.Content;
-            tbTitle.Text = selectedStory.Title;
-            tbDate.Text = selectedStory.Date.ToShortDateString();
-            iPicture.Source = selectedStory.Picture;
-        }*/
     }
 }

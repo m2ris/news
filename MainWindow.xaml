@@ -12,7 +12,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
-        <ListBox DisplayMemberPath="Title" Grid.Column="0" ItemsSource="{Binding Path=Stories}" SelectedItem="{Binding Path=SelectedStory}"></ListBox>
-        <controls:StoryControl Story="{Binding Path=SelectedStory}"  Grid.Column="1" x:Name="StoryControl"></controls:StoryControl>
+        <ListBox Grid.Column="0" ItemsSource="{Binding Stories}" DisplayMemberPath="Title" SelectedItem="{Binding SelectedStory, Mode=TwoWay}"></ListBox>
+        <controls:StoryControl Story="{Binding SelectedStory}"  Grid.Column="1"></controls:StoryControl>
     </Grid>
 </Window>
