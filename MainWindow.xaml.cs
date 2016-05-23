@@ -40,6 +40,7 @@ namespace News
         {
             getVM().StoriesService = new ErrStoriesService();
         }
+
         private void Postimees_MouseUp(object sender, MouseButtonEventArgs e)
         {
             getVM().StoriesService = new PostimeesStoriesService();

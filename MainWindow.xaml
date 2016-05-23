@@ -18,7 +18,7 @@
                 <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Postimees_logo.svg/2000px-Postimees_logo.svg.png" MouseUp="Postimees_MouseUp" Width="100"></Image>
                 <Image Source="http://h.delfi.ee/g/l/223_delfi_2015a.png" MouseUp="Delfi_MouseUp" Width="80"></Image>
             </StackPanel>
-            <ListBox SelectedItem="{Binding SelectedStory, Mode=TwoWay}" ItemsSource="{Binding Stories}" SelectionChanged="lbStories_selChanged" DisplayMemberPath="Title"></ListBox>
+            <ListBox SelectedItem="{Binding SelectedStory, Mode=TwoWay}" ItemsSource="{Binding Stories}" DisplayMemberPath="Title"></ListBox>
         </StackPanel>
         <controls:StoryControl Story="{Binding SelectedStory}" Grid.Column="1"></controls:StoryControl>
 

@@ -57,15 +57,10 @@ namespace News.model
             set
             {
                 _storiesService = value;
-                ReloadStories();
+                Stories = new ObservableCollection<Story>(StoriesService.loadStories());
                 OnPropertyChanged("StoriesService");
             }
         }
         #endregion
-
-        private void ReloadStories()
-        {
-            Stories = new ObservableCollection<Story>(StoriesService.loadStories());
-        }
     }
 }

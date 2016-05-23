@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\StoryControl.xaml">
+    <Page Include="Controls\StoryControl\StoryControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,7 +67,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\StoryControl.xaml.cs">
+    <Compile Include="Controls\StoryControl\StoryControl.xaml.cs">
       <DependentUpon>StoryControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\ErrStoriesService.cs" />
@@ -82,8 +82,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ViewModel\BaseVM.cs" />
-    <Compile Include="Model\ViewModel\MainWindowVM.cs" />
+    <Compile Include="Model\BaseVM.cs" />
+    <Compile Include="MainWindowVM.cs" />
     <Compile Include="Model\Story.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
