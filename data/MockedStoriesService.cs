@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace News.data
 {
-    class MockedStoriesService : StoriesService
+    public class MockedStoriesService : StoriesService
     {
         public List<Story> loadStories()
         {

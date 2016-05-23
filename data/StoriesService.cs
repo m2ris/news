@@ -8,7 +8,7 @@ using News.model;
 
 namespace News.data
 {
-    interface StoriesService
+    public interface StoriesService
     {
         List<Story> loadStories();   
     }

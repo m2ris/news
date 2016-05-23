@@ -10,7 +10,7 @@ using News.Helpers;
 
 namespace News.data
 {
-    class ErrStoriesService : StoriesService
+    public class ErrStoriesService : StoriesService
     {
         public List<Story> loadStories()
         {

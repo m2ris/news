@@ -9,7 +9,7 @@ using System.Xml;
 
 namespace News.data
 {
-    class DelfiStoriesService : StoriesService
+    public class DelfiStoriesService : StoriesService
     {
         public List<Story> loadStories()
         {

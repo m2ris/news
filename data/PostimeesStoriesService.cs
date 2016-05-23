@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace News.data
 {
-    class PostimeesStoriesService : StoriesService
+    public class PostimeesStoriesService : StoriesService
     {
         public List<Story> loadStories()
         {
