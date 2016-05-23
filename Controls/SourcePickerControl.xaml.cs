@@ -22,11 +22,11 @@ namespace News.Controls
     public partial class SourcePickerControl : UserControl
     {
         #region DataSource DP
-        public StoriesService DataSource
+        public StoriesService DataSource 
         {
             get { return (StoriesService)GetValue(StoriesServiceProperty); }
             set { SetValue(StoriesServiceProperty, value); }
-        }
+        } 
         public static readonly DependencyProperty StoriesServiceProperty =
             DependencyProperty.Register("DataSource", typeof(StoriesService),
               typeof(SourcePickerControl), new PropertyMetadata(null));
