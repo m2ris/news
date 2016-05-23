@@ -31,21 +31,6 @@ namespace News
             DataContext = new MainWindowVM();
         }
 
-        private void Delfi_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            getVM().StoriesService = new DelfiStoriesService();
-        }
-
-        private void Err_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            getVM().StoriesService = new ErrStoriesService();
-        }
-
-        private void Postimees_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            getVM().StoriesService = new PostimeesStoriesService();
-        }
-
         private MainWindowVM getVM()
         {
             return DataContext as MainWindowVM;
